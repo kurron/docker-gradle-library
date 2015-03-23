@@ -1,19 +1,19 @@
-logger.quiet "bintrayUser = ${bintrayUser}"
-logger.quiet "bintrayKey = ${bintrayKey}"
-logger.quiet "bintrayPublish = ${bintrayPublish}"
-logger.quiet "bintrayRepositoryName = ${bintrayRepositoryName}"
-logger.quiet "bintrayPackageName = ${bintrayPackageName}"
-logger.quiet "bintrayDescription = ${bintrayDescription}"
-logger.quiet "bintrayWebsiteUrl = ${bintrayWebsiteUrl}"
-logger.quiet "bintrayIssueTrackerUrl = ${bintrayIssueTrackerUrl}"
-logger.quiet "bintrayVcsUrl = ${bintrayVcsUrl}"
-logger.quiet "bintrayLicense = ${bintrayLicense}"
+logger.debug "bintrayUser = ${bintrayUser}"
+logger.debug "bintrayKey = ${bintrayKey}"
+logger.debug "bintrayPublish = ${bintrayPublish}"
+logger.debug "bintrayRepositoryName = ${bintrayRepositoryName}"
+logger.debug "bintrayPackageName = ${bintrayPackageName}"
+logger.debug "bintrayDescription = ${bintrayDescription}"
+logger.debug "bintrayWebsiteUrl = ${bintrayWebsiteUrl}"
+logger.debug "bintrayIssueTrackerUrl = ${bintrayIssueTrackerUrl}"
+logger.debug "bintrayVcsUrl = ${bintrayVcsUrl}"
+logger.debug "bintrayLicense = ${bintrayLicense}"
 
 bintray {
     user = bintrayUser 
     key = bintrayKey 
 
-    publications = ['mavenJava'] //does this need to be configurable? *****************8 
+    publications = ['mavenJava'] //does this need to be configurable? *****************
     dryRun = false 
     publish = bintrayPublish 
     pkg {
