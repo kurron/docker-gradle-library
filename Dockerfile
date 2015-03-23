@@ -4,3 +4,6 @@
 FROM kurron/docker-gradle:latest
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
+
+# copy the Gradle pieces into the container
+COPY gradle /opt/gradle/gradle/

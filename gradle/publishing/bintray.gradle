@@ -1,0 +1,33 @@
+logger.quiet "bintrayUser = ${bintrayUser}"
+logger.quiet "bintrayKey = ${bintrayKey}"
+logger.quiet "bintrayPublish = ${bintrayPublish}"
+logger.quiet "bintrayRepositoryName = ${bintrayRepositoryName}"
+logger.quiet "bintrayPackageName = ${bintrayPackageName}"
+logger.quiet "bintrayDescription = ${bintrayDescription}"
+logger.quiet "bintrayWebsiteUrl = ${bintrayWebsiteUrl}"
+logger.quiet "bintrayIssueTrackerUrl = ${bintrayIssueTrackerUrl}"
+logger.quiet "bintrayVcsUrl = ${bintrayVcsUrl}"
+logger.quiet "bintrayLicense = ${bintrayLicense}"
+
+bintray {
+    user = bintrayUser 
+    key = bintrayKey 
+
+    publications = ['mavenJava'] //does this need to be configurable? *****************8 
+    dryRun = false 
+    publish = bintrayPublish 
+    pkg {
+        repo = bintrayRepositoryName 
+        name = bintrayPackageName 
+        desc = bintrayDescription 
+        websiteUrl = bintrayWebsiteUrl 
+        issueTrackerUrl = bintrayIssueTrackerUrl 
+        vcsUrl = bintrayVcsUrl 
+        licenses = [bintrayLicense]
+        publicDownloadNumbers = true
+        version {
+            name = project.version
+            desc = project.description
+        }
+    }
+}
